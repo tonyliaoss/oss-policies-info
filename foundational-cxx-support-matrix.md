@@ -9,8 +9,8 @@ Note that some of these version supports apply broadly to other languages as wel
 | Distribution    | Supported Version      | Last Changed | Next Change [^next-change] |
 |-----------------|------------------------|--------------|-------------|
 | Alpine          | >= 3.21                | 2026-04-01   | 2026-11-01 |
-| Debian          | >= 11                  | 2024-07-01   | 2026-06-30 |
-| Fedora          | >= 42                  | 2025-12-16   | 2026-05-13 |
+| Debian          | >= 13                  | 2026-06-08   | 2027-06-30 |
+| Fedora          | >= 43                  | 2026-06-08   | 2026-12-10 |
 | openSUSE        | >= Leap 16.0           | 2026-05-01   | 2027-10-31 |
 | Ubuntu LTS      | >= 22.04               | 2025-06-04   | 2027-05-01 |
 | RHEL            | >= 9                   | 2024-07-01   | 2027-06-01 |
@@ -20,19 +20,19 @@ Note that some of these version supports apply broadly to other languages as wel
 | Dimension       | Supported Version      | Last Changed | Next Change [^next-change] |
 |-----------------|------------------------|--------------|-------------|
 | Windows Server  | >= 2022                | 2024-01-22   | 2026-10-13 |
-| Windows Client  | >= 11                  | 2025-12-16   | 2026-05-13 |
+| Windows Client  | >= 11                  | 2025-12-16   | 2026-10-13 |
 
 ## macOS
 | Dimension         | Supported Version      | Last Changed | Next Change [^next-change] |
 |-------------------|------------------------|--------------|-------------|
 | Xcode             | >= 26                  | 2025-09-15   | 2026-09-15 |
-| macOS (target)    | >= 12 (Monterey)       | 2025-12-16   | 2026-07-01 |
+| macOS (target)    | >= 14 (Monterey)       | 2026-06-06   | 2027-01-01 |
 | iOS  (target)     | >= 15                  | 2025-12-16   | 2026-09-15 |
 
 ## Android NDK
 | Dimension              | Supported Version      | Last Changed | Next Change [^next-change] |
 |------------------------|------------------------|--------------|----------------------------|
-| Android API (target)   | >= 21                  | 2022-09-18   |                            |
+| Android API (target)   | >= 35                  | 2026-06-08   |                            |
 
 ## Compilers, tools, build systems
 
