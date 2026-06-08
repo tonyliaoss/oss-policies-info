@@ -6,6 +6,18 @@ This document captures the specific version numbers as resolved by those policie
 Note that some of these version supports apply broadly to other languages as well, and are not exclusive to C++.
 
 ## Linux distributions
+
+### Cited Text
+
+> We will support releases of the following Linux distributions until the vendor
+> drops support.
+
+Vendor support is obtained from published support windows.
+https://endoflife.date/ consolidates these support windows on top of providing a
+visualization.
+
+### Implied Support Matrix
+
 | Distribution    | Supported Version      | Last Changed | Next Change [^next-change] |
 |-----------------|------------------------|--------------|-------------|
 | Alpine          | >= 3.21                | 2026-04-01   | 2026-11-01 |
@@ -17,24 +29,75 @@ Note that some of these version supports apply broadly to other languages as wel
 | RockyLinux      | >= 9                   | 2024-07-01   | 2027-06-01 |
 
 ## Windows
+
+### Cited Text
+
+> We will build using the **newest Windows** server platform available.
+>
+> We will support all the Windows versions that Microsoft supports.
+> i.  [Windows client support](https://docs.microsoft.com/en-us/windows/release-health/supported-versions-windows-client)
+> ii. [Windows server support](https://endoflife.date/windows-server)
+
+### Implied Support Matrix
+
 | Dimension       | Supported Version      | Last Changed | Next Change [^next-change] |
 |-----------------|------------------------|--------------|-------------|
 | Windows Server  | >= 2022                | 2024-01-22   | 2026-10-13 |
 | Windows Client  | >= 11                  | 2025-12-16   | 2026-10-13 |
 
 ## macOS
+
+### Cited Text
+
+> We will build using the newest XCode available.
+> We will support back to the oldest macOS target platform needed by Chrome.
+> We will support back to the oldest iOS target platform that has a simulator.
+
+Note that Chrome has announced a update in minimum required OS version in
+[151](https://support.google.com/chrome/thread/404150391/sunsetting-support-for-macos-12-monterey-in-mid-2026?hl=en).
+In addition, the
+[Chrome browser system requirements](https://support.google.com/chrome/a/answer/7100626)
+page shows Chrome's support timelines.
+
+### Implied Support Matrix
 | Dimension         | Supported Version      | Last Changed | Next Change [^next-change] |
 |-------------------|------------------------|--------------|-------------|
 | Xcode             | >= 26                  | 2025-09-15   | 2026-09-15 |
-| macOS (target)    | >= 14 (Monterey)       | 2026-06-06   | 2027-01-01 |
+| macOS (target)    | >= 13 (Ventura)        | 2026-06-06   | 2027-01-01 |
 | iOS  (target)     | >= 15                  | 2025-12-16   | 2026-09-15 |
 
 ## Android NDK
+
+### Cited Text
+
+> We will support Android -- we will build using the newest Android NDK and
+> target its lowest supported API level (example
+> [meta/platforms.json](https://android.googlesource.com/platform/ndk.git/+/refs/heads/master/meta/platforms.json)).
+
+### Implied Support Matrix
 | Dimension              | Supported Version      | Last Changed | Next Change [^next-change] |
 |------------------------|------------------------|--------------|----------------------------|
-| Android API (target)   | >= 35                  | 2026-06-08   |                            |
+| Android API (target)   | >= 21                  | 2022-09-18   |                            |
 
 ## Compilers, tools, build systems
+
+### Cited Text
+
+> 1. We do not support any compiler that is EOL as defined by the vendor.
+> 1. We support GCC and Clang on our supported Linux distros (see above). We
+>    support the version installed by default (e.g., apt install gcc), unless
+>    we've explicitly excluded support for that version because it doesn't
+>    support other required policies of ours (e.g., we agree to remove GCC 4.8
+>    because of its incomplete C++11 support, as well as clang 3.x). If we
+>    cannot support the default version, we may instead support a newer version
+>    that's available from the vendor (e.g., devtoolset-7 on RHEL/CentOS 7)
+> 1. We support Apple Clang on our supported XCode version.
+> 1. We support MSVC on our supported Windows versions.
+>    1. We support the MSVC versions that are in the Mainstream Support window
+>       as defined by Microsoft's Fixed Lifecycle Policy.
+
+
+### Implied Support Matrix
 
 | Dimension       | Supported Version      | Last Changed | Next Change [^next-change] |
 |-----------------|------------------------|--------------|-------------|

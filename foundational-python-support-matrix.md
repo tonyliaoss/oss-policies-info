@@ -1,7 +1,18 @@
 
 # Foundational Python Support
 
-The relevant policies are described at https://docs.cloud.google.com/python/docs/supported-python-versions. This document captures the specific version numbers as resolved by those policies.
+The relevant policies are described at
+https://docs.cloud.google.com/python/docs/supported-python-versions. This
+document captures the specific version numbers as resolved by those policies.
+
+### Cited Text
+
+> Cloud Client Libraries for Python are compatible with all current active and
+> maintenance versions of Python. To see currently supported Python versions,
+> see [Supported Versions](https://devguide.python.org/versions/#supported-versions).
+
+
+### Implied Support Matrix
 
 | Dimension       | Supported Version | Last Changed | Next Change [^next-change] |
 |-----------------|-------------------|--------------|----------------------------|
