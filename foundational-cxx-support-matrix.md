@@ -21,8 +21,8 @@ visualization.
 | Distribution    | Supported Version      | Last Changed | Next Change [^next-change] |
 |-----------------|------------------------|--------------|-------------|
 | Alpine          | >= 3.21                | 2026-04-01   | 2026-11-01 |
-| Debian          | >= 13                  | 2026-06-08   | 2027-06-30 |
-| Fedora          | >= 43                  | 2026-06-08   | 2026-12-10 |
+| Debian          | >= 13                  | 2026-07-09   | 2027-06-30 |
+| Fedora          | >= 43                  | 2026-07-09   | 2026-12-10 |
 | openSUSE        | >= Leap 16.0           | 2026-05-01   | 2027-10-31 |
 | Ubuntu LTS      | >= 22.04               | 2025-06-04   | 2027-05-01 |
 | RHEL            | >= 9                   | 2024-07-01   | 2027-06-01 |
@@ -53,7 +53,8 @@ visualization.
 > We will support back to the oldest macOS target platform needed by Chrome.
 > We will support back to the oldest iOS target platform that has a simulator.
 
-Note that Chrome has announced a update in minimum required OS version in
+Note that Chrome has announced an update in its minimum required macOS version
+in
 [151](https://support.google.com/chrome/thread/404150391/sunsetting-support-for-macos-12-monterey-in-mid-2026?hl=en).
 In addition, the
 [Chrome browser system requirements](https://support.google.com/chrome/a/answer/7100626)
@@ -63,7 +64,7 @@ page shows Chrome's support timelines.
 | Dimension         | Supported Version      | Last Changed | Next Change [^next-change] |
 |-------------------|------------------------|--------------|-------------|
 | Xcode             | >= 26                  | 2025-09-15   | 2026-09-15 |
-| macOS (target)    | >= 13 (Ventura)        | 2026-06-06   | 2027-01-01 |
+| macOS (target)    | >= 13 (Ventura)        | 2026-07-09   | 2027-01-01 |
 | iOS  (target)     | >= 15                  | 2025-12-16   | 2026-09-15 |
 
 ## Android NDK
@@ -104,12 +105,23 @@ page shows Chrome's support timelines.
 | C++ Version     | >= 17                  | 2024-12-17   | 2027-12-15  |
 | CMake           | >= 3.22                | 2025-06-04   | 2027-05-01 [^cmake] |
 | Bazel           | 8 LTS                  | 2025-12-16   | 2026-12-01  |
-| GCC             | >= 10                  | 2026-05-01   | 2026-06-30 [^gcc] |
+| GCC             | >= 10                  | 2026-07-09   | 2027-06-30 [^gcc] |
 | Clang           | >= 14.0.0              | 2025-06-04   | 2027-05-01 [^clang] |
 | MSVC            | >= 2022                | 2024-04-29   | 2027-01-12  |
-| Apple Clang     | >= 17                  | 2025-12-19   | 2026-07-01 |
+| Apple Clang     | >= 21                  | 2026-07-09   | 2027-09-15 [^apple-clang] |
 | glibc           | >= 2.27                | 2024-07-09   | TBD [^glibc] |
 | musl            | >= 1.2.5               | 2026-04-01   | 2026-11-01 |
+
+### Implied Support Matrix [Detailed Linux Breakdown]
+
+| Tool            | Debian   | Alpine   | Fedora/Red Hat | Rocky   | openSUSE | Ubuntu LTS | Last Changed | Next Change [^next-change] |
+|-----------------|---------------------|----------------|---------|----------|------------|--------------|-------------|
+| C++ Version     | >= 17    | >= 17    | >= 17          | >= 17   | >= 17    | >= 17      | 2024-12-17   | 2027-12-15  |
+| CMake           | >= 3.31  | >= 4.2.3 | >= 4.3.0       | >= 3.31 | >= 4.3.4 | >= 3.22    | 2026-07-09   | 2027-05-01 [^cmake] |
+| GCC             | >= 14.2  | >= 15.2  | >= 16.1        | >= 11.5 | >= 15.0  | >= 11.2    | 2026-07-09   | 2027-06-30 [^gcc] |
+| Clang           | >= 19.0  | >= 18.1  | >= 22.1        | >= 21.1 | >= 22.0  | >= 14.0    | 2026-07-09   | 2027-05-01 [^clang] |
+| glibc           | >= 2.41  | N/A      | >= 2.43        | >= 2.34 | >= 2.43  | >= 2.35    | 2026-07-09   | TBD [^glibc] |
+| musl            | >= 1.2.5 | >= 1.2.6 | >= 1.2.6       | N/A     | N/A      | >= 1.2.5   | 2026-07-09   | 2026-11-01 |
 
 [^next-change]: This is an estimated date. The actual date may change if the
 vendor (or community, as applicable) extends or shortens the lifetime of the
@@ -126,6 +138,9 @@ version.
 [^clang]: We support the oldest version of Clang that ships with one of the
 supported distros. Currently that is Clang 14.0 as Ubuntu 22.04 ships with
 this version.
+
+[^apple-clang]: A community-maintained version record can be found
+[here](https://gist.github.com/yamaya/2924292).
 
 [^glibc]: We plan to support glibc >= 2.27 until further notice.
 
