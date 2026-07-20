@@ -105,7 +105,7 @@ page shows Chrome's support timelines.
 | C++ Version     | >= 17                  | 2024-12-17   | 2027-12-15  |
 | CMake           | >= 3.22                | 2025-06-04   | 2027-05-01 [^cmake] |
 | Bazel           | 8 LTS                  | 2025-12-16   | 2026-12-01  |
-| GCC             | >= 10                  | 2026-07-09   | 2027-06-30 [^gcc] |
+| GCC             | >= 10                  | 2026-05-01   | 2027-06-30 [^gcc] |
 | Clang           | >= 14.0.0              | 2025-06-04   | 2027-05-01 [^clang] |
 | MSVC            | >= 2022                | 2024-04-29   | 2027-01-12  |
 | Apple Clang     | >= 21                  | 2026-07-09   | 2027-09-15 [^apple-clang] |
@@ -114,14 +114,19 @@ page shows Chrome's support timelines.
 
 ### Implied Support Matrix [Detailed Linux Breakdown]
 
-| Tool            | Debian   | Alpine   | Fedora/Red Hat | Rocky   | openSUSE | Ubuntu LTS | Last Changed | Next Change [^next-change] |
-|-----------------|---------------------|----------------|---------|----------|------------|--------------|-------------|
-| C++ Version     | >= 17    | >= 17    | >= 17          | >= 17   | >= 17    | >= 17      | 2024-12-17   | 2027-12-15  |
-| CMake           | >= 3.31  | >= 4.2.3 | >= 4.3.0       | >= 3.31 | >= 4.3.4 | >= 3.22    | 2026-07-09   | 2027-05-01 [^cmake] |
-| GCC             | >= 14.2  | >= 15.2  | >= 16.1        | >= 11.5 | >= 15.0  | >= 11.2    | 2026-07-09   | 2027-06-30 [^gcc] |
-| Clang           | >= 19.0  | >= 18.1  | >= 22.1        | >= 21.1 | >= 22.0  | >= 14.0    | 2026-07-09   | 2027-05-01 [^clang] |
-| glibc           | >= 2.41  | N/A      | >= 2.43        | >= 2.34 | >= 2.43  | >= 2.35    | 2026-07-09   | TBD [^glibc] |
-| musl            | >= 1.2.5 | >= 1.2.6 | >= 1.2.6       | N/A     | N/A      | >= 1.2.5   | 2026-07-09   | 2026-11-01 |
+This table charts the default package version from major Linux distributions
+that comes with a standard install on our oldest supported distro major version.
+
+NOTE: This table should be audited again on or after 2026-11-01.
+
+| Tool            | Debian   | Alpine   | Fedora   | Rocky   | openSUSE | Ubuntu LTS |
+|-----------------|---------------------|----------|---------|----------|------------|
+| C++ Version     | >= 17    | >= 17    | >= 17    | >= 17   | >= 17    | >= 17      |
+| CMake           | >= 3.31  | >= 4.2.3 | >= 4.3.0 | >= 3.31 | >= 4.3.4 | >= 3.22    |
+| GCC             | >= 14.2  | >= 15.2  | >= 16.1  | >= 11.5 | >= 15.0  | >= 11.2    |
+| Clang           | >= 19.0  | >= 18.1  | >= 22.1  | >= 21.1 | >= 22.0  | >= 14.0    |
+| glibc           | >= 2.41  | N/A      | >= 2.43  | >= 2.34 | >= 2.43  | >= 2.35    |
+| musl            | >= 1.2.5 | >= 1.2.6 | >= 1.2.6 | N/A     | N/A      | >= 1.2.5   |
 
 [^next-change]: This is an estimated date. The actual date may change if the
 vendor (or community, as applicable) extends or shortens the lifetime of the
