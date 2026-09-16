@@ -115,18 +115,20 @@ page shows Chrome's support timelines.
 ### Implied Support Matrix [Detailed Linux Breakdown]
 
 This table charts the default package version from major Linux distributions
-that comes with a standard install on our oldest supported distro major version.
+that comes with a standard install on our oldest supported distro major version,
+along with the resulting minimum supported version across all distros.
 
 NOTE: This table should be audited again on or after 2026-11-01.
 
-| Tool            | Debian   | Alpine   | Fedora   | Rocky   | openSUSE | Ubuntu LTS |
-|-----------------|---------------------|----------|---------|----------|------------|
-| C++ Version     | >= 17    | >= 17    | >= 17    | >= 17   | >= 17    | >= 17      |
-| CMake           | >= 3.31  | >= 4.2.3 | >= 4.3.0 | >= 3.31 | >= 4.3.4 | >= 3.22    |
-| GCC             | >= 14.2  | >= 15.2  | >= 16.1  | >= 11.5 | >= 15.0  | >= 11.2    |
-| Clang           | >= 19.0  | >= 18.1  | >= 22.1  | >= 21.1 | >= 22.0  | >= 14.0    |
-| glibc           | >= 2.41  | N/A      | >= 2.43  | >= 2.34 | >= 2.43  | >= 2.35    |
-| musl            | >= 1.2.5 | >= 1.2.6 | >= 1.2.6 | N/A     | N/A      | >= 1.2.5   |
+| Distribution (Oldest Supported) | C++ Version | CMake       | GCC         | Clang       | glibc       | musl         |
+|---------------------------------|-------------|-------------|-------------|-------------|-------------|--------------|
+| Alpine (3.21)                   | 17          | 4.2.3       | 15.2        | 18.1        | N/A         | 1.2.6        |
+| Debian (13)                     | 17          | 3.31        | 14.2        | 19.0        | 2.41        | 1.2.5        |
+| Fedora (43)                     | 17          | 4.3.0       | 16.1        | 22.1        | 2.43        | 1.2.6        |
+| openSUSE (Leap 16.0)            | 17          | 4.3.4       | 15.0        | 22.0        | 2.43        | N/A          |
+| RHEL / RockyLinux (9)           | 17          | 3.31        | 11.5        | 21.1        | 2.34        | N/A          |
+| Ubuntu LTS (22.04)              | 17          | 3.22        | 11.2        | 14.0        | 2.35        | 1.2.5        |
+| **Minimum Supported**           | **>= 17**   | **>= 3.22** | **>= 11.2** | **>= 14.0** | **>= 2.34** | **>= 1.2.5** |
 
 [^next-change]: This is an estimated date. The actual date may change if the
 vendor (or community, as applicable) extends or shortens the lifetime of the
@@ -137,7 +139,7 @@ supported distros. Currently that is CMake 3.22 as Ubuntu 22.04 ships with this
 version.
 
 [^gcc]: We support the oldest version of GCC that ships with one of the
-supported distros. Currently that is GCC 10 as Debian 11 ships with this
+supported distros. Currently that is GCC 11.2 as Ubuntu 22.04 ships with this
 version.
 
 [^clang]: We support the oldest version of Clang that ships with one of the
