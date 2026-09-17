@@ -63,7 +63,7 @@ page shows Chrome's support timelines.
 ### Implied Support Matrix
 | Dimension         | Supported Version      | Last Changed | Next Change [^next-change] |
 |-------------------|------------------------|--------------|-------------|
-| Xcode             | >= 26                  | 2025-09-15   | 2026-09-15 |
+| Xcode             | >= 27                  | 2026-09-17   | 2027-09-15 |
 | macOS (target)    | >= 13 (Ventura)        | 2026-09-17   | 2027-01-01 |
 | iOS  (target)     | >= 17                  | 2026-09-17   | 2027-09-15 |
 
@@ -105,7 +105,7 @@ page shows Chrome's support timelines.
 | C++ Version     | >= 17                  | 2024-12-17   | 2027-12-15  |
 | CMake           | >= 3.22                | 2025-06-04   | 2027-05-01 [^cmake] |
 | Bazel           | 8 LTS                  | 2025-12-16   | 2026-12-01  |
-| GCC             | >= 10                  | 2026-05-01   | 2027-06-30 [^gcc] |
+| GCC             | >= 11.2                | 2026-09-17   | 2027-06-30 [^gcc] |
 | Clang           | >= 14.0.0              | 2025-06-04   | 2027-05-01 [^clang] |
 | MSVC            | >= 2022                | 2024-04-29   | 2027-01-12  |
 | Apple Clang     | >= 21                  | 2026-09-17   | 2027-09-15 [^apple-clang] |
@@ -122,9 +122,9 @@ NOTE: This table should be audited again on or after 2026-11-01.
 
 | Distribution (Oldest Supported) | C++ Version | CMake       | GCC         | Clang       | glibc       | musl         |
 |---------------------------------|-------------|-------------|-------------|-------------|-------------|--------------|
-| Alpine (3.21)                   | 17          | 4.2.3       | 15.2        | 18.1        | N/A         | 1.2.6        |
+| Alpine (3.21)                   | 17          | 3.31        | 14.2        | 19.1        | N/A         | 1.2.5        |
 | Debian (13)                     | 17          | 3.31        | 14.2        | 19.0        | 2.41        | 1.2.5        |
-| Fedora (43)                     | 17          | 4.3.0       | 16.1        | 22.1        | 2.43        | 1.2.6        |
+| Fedora (43)                     | 17          | 3.31        | 15.2        | 21.1        | 2.42        | 1.2.6        |
 | openSUSE (Leap 16.0)            | 17          | 4.3.4       | 15.0        | 22.0        | 2.43        | N/A          |
 | RHEL / RockyLinux (9)           | 17          | 3.31        | 11.5        | 21.1        | 2.34        | N/A          |
 | Ubuntu LTS (22.04)              | 17          | 3.22        | 11.2        | 14.0        | 2.35        | 1.2.5        |
